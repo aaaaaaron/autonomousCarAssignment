@@ -1,6 +1,6 @@
 # Interview assignment, Self Driving Car.
 
-I integrated the use of YOLO and SORT to implement a simple object detector, tracker, and driver warning system. I ran my tests on KITTI Dataset, data_odometry_gray.zip, it should be a 23.2GB download zip file.
+I integrated the use of YOLO and SORT to implement a simple object detector, Car/Person tracker, and driver warning system. I ran my tests on KITTI Dataset, data_odometry_gray.zip, it should be a 23.2GB download zip file.
 
 ## Requirements:
 1) OpenCV (I used 3.3.1)
@@ -42,8 +42,11 @@ Depending on which dataset, the image width and height might be different, this 
 Change the directory of the KITTI dataset in the launch file as well.
 
 ## Running it:
+```
 cd ~/catkin_ws/src/autonomousCarAssignment/
 roslaunch kitti_yolo_predictor.launch
+```
+There should be a window showing the frames and bounding boxes, while the original terminal will start printing out warning statements.
 
 ## Afterthoughts:
 I wanted to use the SORT tracker to do a Kalman Filter predictor to warn the driver, however was out of time.
