@@ -1,0 +1,13 @@
+<launch>
+    <param name="kitti_image_dir" value="/home/aaaaaaron/ascent_ws/src/dataset/sequences/08/image_1/" />
+  
+  	<node name="kitti_loader" pkg="kitti_loader" type="kitti_loader.py" output="screen" >
+  		<param name="image_width" value="1226"/>
+    	<param name="image_height" value="370"/>
+  	</node>
+  	
+   	<node pkg="darknet_ros" type="yolo_ros" name="yolo_ros" >
+   		<param name="cfg_dir" value="/home/aaaaaaron/ascent_ws/src/darknet_ros/yolo_network_config/cfg/yolo-voc.cfg"/>
+   		<param name="weights_dir" value="/home/aaaaaaron/ascent_ws/src/darknet_ros/yolo_network_config/weights/yolo-voc.weights"/>
+   	</node>
+</launch>
