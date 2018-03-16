@@ -6,10 +6,7 @@
     	<param name="image_height" value="370"/>
   	</node>
 
-   	<node pkg="darknet_ros" type="yolo_ros" name="yolo_ros" >
-   		<param name="cfg_dir" value="/home/aaaaaaron/ascent_ws/src/darknet_ros/yolo_network_config/cfg/yolo-voc.cfg"/>
-   		<param name="weights_dir" value="/home/aaaaaaron/ascent_ws/src/darknet_ros/yolo_network_config/weights/yolo-voc.weights"/>
-   	</node>
+   	<node pkg="darknet_ros" type="yolo_ros" name="yolo_ros" />
 
    	<node name="predictor" pkg="predictor" type="predictor.py" output="screen" />
 
