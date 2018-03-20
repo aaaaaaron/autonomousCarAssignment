@@ -1,12 +1,13 @@
-#Interview assignment, Self Driving Car.
+# Interview assignment, Self Driving Car.
 
 I integrated the use of YOLO and SORT to implement a simple object detector, Car/Person tracker, and driver warning system. I ran my tests on KITTI Dataset, data_odometry_gray.zip, it should be a 23.2GB download zip file.
 
 ## Requirements:
-1) OpenCV (I used 3.3.1)
-2) Able to run YOLO
-3) Ubuntu 16.04 
-4) ROS Kinetic
+1) OpenCV 	(I used 3.3.1)
+2) Boost 	(c++ library)
+3) CUDA 	(for fast performance, I used 8.0.61)
+4) Ubuntu 16.04 
+5) ROS Kinetic
 
 ## Setup:
 I assume the above are all installed. First we set up the ROS workspace, assuming the name is catkin_ws
